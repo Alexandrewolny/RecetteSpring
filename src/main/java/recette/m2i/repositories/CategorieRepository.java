@@ -5,11 +5,12 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import recette.m2i.models.Categorie;
-import recette.m2i.models.Recette;
 
-public interface RecetteRepository extends MongoRepository<Recette, String> {
+public interface CategorieRepository extends MongoRepository<Categorie,String> {
+	
+	public List<Categorie> findByNomAllIgnoreCase(String nom);
 
-	public List<Recette> findByNomAllIgnoreCase(String nom);
+
 	
 
 }

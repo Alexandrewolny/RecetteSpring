@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import recette.m2i.models.Categorie;
 import recette.m2i.models.Recette;
 import recette.m2i.services.RecetteService;
 
@@ -59,6 +59,14 @@ public class RecetteController {
 		Recette oldRecette = this.rservice.findById(id);
 		recette.setId(oldRecette.getId());
 		return this.rservice.update(recette);
+		
+	}
+	
+	@GetMapping("/categorie/{nom}")
+	@ResponseStatus(code = HttpStatus.OK)
+	public Recette findByCategorie(@PathVariable Categorie nom, @RequestBody Recette recette) {
+		
+		return recette;
 		
 	}
 	

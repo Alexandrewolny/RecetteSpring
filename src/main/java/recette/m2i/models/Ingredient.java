@@ -9,18 +9,19 @@ public class Ingredient {
 	
 	@Id
 	private String id;
+	
 	private String nom;
-	private int quatite;
-	private int unite;
+	private int quantite;
+	private String unite;
 	
 	public Ingredient() {
 		
 	}
 
-	public Ingredient(String id, String nom, int quatite, int unite) {
+	public Ingredient(String id, String nom, int quantite, String unite) {
 		this.id = id;
 		this.nom = nom;
-		this.quatite = quatite;
+		this.quantite = quantite;
 		this.unite = unite;
 	}
 	

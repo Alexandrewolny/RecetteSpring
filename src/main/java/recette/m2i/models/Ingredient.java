@@ -9,7 +9,6 @@ public class Ingredient {
 	
 	@Id
 	private String id;
-	
 	private String nom;
 	private int quantite;
 	private String unite;

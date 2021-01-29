@@ -1,5 +1,7 @@
 package recette.m2i.models;
 
+
+
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -16,6 +18,8 @@ public class Recette {
 	
 	@DBRef
 	private List<Ingredient> ingredients;
+	
+	@DBRef
 	private List<Categorie> categories;
 	private String description;
 	
